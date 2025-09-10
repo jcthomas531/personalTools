@@ -9,7 +9,7 @@ basicKablePdf <- function(table,
                           digits = NULL) {
   #argument set up
   kableArgs <- list(x = table, caption = title,
-                    longtable=FALSE, format = "latex")
+                    longtable=FALSE, format = "latex", booktabs = TRUE)
   if (!is.null(colNames)) kableArgs$col.names <- colNames
   if (!is.null(digits)) kableArgs$digits = digits
   #table creation
