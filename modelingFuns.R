@@ -13,7 +13,7 @@ pressResids <- function(model) {
   pii <- (X %*% solve(t(X) %*% X) %*% t(X)) |>
     diag()
   #calculate regular residuals
-  res <- resid(m2)
+  res <- resid(model)
   #calculate press residuals
   pressRes <- res/(1-pii)
   
